@@ -1,0 +1,57 @@
+package Methods;
+//java  Calculator  10 + 20
+//how to get the command line argument...
+
+public class Calculator {
+
+	public int add(int no1, int no2) {
+		return no1 + no2;
+	}
+	
+	public int sub(int no1, int no2) {
+		return no1 - no2;
+	}
+	
+	public int mul(int no1, int no2) {
+		return no1 * no2;
+	}
+	
+	public int div(int no1, int no2) {
+		return no1 / no2;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(args.length);
+		System.out.println(args[0]);
+		System.out.println(args[1]);
+		System.out.println(args[2]);
+		
+		int num1, num2, result;
+		String oper;
+		num1 = Integer.parseInt(args[0]);
+		oper = args[1];
+		num2 = Integer.parseInt(args[2]);
+		
+		Calculator objCalculator = new Calculator();
+		
+		if(oper.equals("+")) {
+			result = objCalculator.add(num1,  num2);
+		}
+		else if(oper.equals("-")) {
+			result = objCalculator.sub(num1, num2);
+		}
+		else if(oper.equals("m")) {
+			result = objCalculator.mul(num1,  num2);
+		}
+		else if(oper.equals("/")) {
+			result = objCalculator.div(num1, num2);
+		}
+		else {
+			result = 0;
+		}
+		
+		System.out.println(num1+oper+num2+"="+result);
+	}
+
+}
+
