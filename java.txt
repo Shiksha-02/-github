@@ -2,7 +2,7 @@ package Methods;
 //java  Calculator  10 + 20
 //how to get the command line argument...
 
-public class Calculator {
+public class Calcu {
 
 	public int add(int no1, int no2) {
 		return no1 + no2;
